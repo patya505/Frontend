@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+        <div id="outer">
+            <h2>Click Download button to start Downloading</h2>
+            <div id="inner1"><div id="inner2"></div></div>
+            <div id="dow">
+            <h1>0%</h1>
+            <button>Download</button></div>
+        </div>
+   
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+body{
+background-color: black;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+h2{
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+#outer{
+        background-color: rgb(243, 244, 248);
+        width: 450px;
+        height: 250px;
+        padding: 10px;
+        border-radius: 30px;
+        
+
+}
+#inner1{
+    width: 100%;
+     border-radius: 20px;
+    background-color: rgb(55, 85, 85);
+   
+}
+#inner2{
+    width: 0%;
+    height: 25px;
+    border-radius: 20px;
+    background-color: rgb(25, 5, 245);
+    margin-top: 40px;
+}
+#dow{
+    display: flex;
+    height: 50px;
+    margin-top: 0px;
+    
+
+    button{
+        margin-left: 250px;
+        padding: 10px;
+        height: 40px;
+        width: 110px;
+        margin-top: 30px;
+        border-radius: 10px;
+        border: black;
+        background-color: salmon;
+        cursor: pointer;
+        
+    }
+}
+button:active{
+    scale: 0.9;
+}
+
+
+
+
+let btn=document.querySelector('button');
+ let h1=document.querySelector('h1');
+ let h2=document.querySelector('h2');
+let inn1=document.querySelector('#inner2');
+
+
+let r= 50 + Math.floor(Math.random()*50)
+
+let a=1;
+
+btn.addEventListener('click',function(){
+        btn.style.opacity=0.5;
+        btn.style.pointerEvents='none'
+        h2.innerHTML='Download in progress'
+     let int=setInterval(function(){
+        inn1.style.width=a+'%';
+        h1.innerHTML=a + '%';
+        a++;
+    },r);
+    setTimeout(function(){
+        clearInterval(int);
+        h2.innerHTML='Download compleated'
+    },r*100);
+
+
+});
+
+
+

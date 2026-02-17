@@ -1,0 +1,85 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+#main{
+    width: 100%;
+    height: 100vh;
+    background-color: #ebe4e4;
+
+}
+#navbar{
+    width: 100%;
+    height: 60px;
+    padding: 20px 30px;
+
+}
+#navbar a{
+    text-decoration: none;
+    font-size: 1.1em;
+    color: rgb(15, 14, 14);
+    margin-right: 30px;
+    font-weight: 20px;
+   
+}
+#navbar a:hover{
+    color: red;
+    transition: 0.9s;
+    
+}
+#main>h1{
+    font-size: 300px;
+    color: rgb(9, 5, 5);
+    margin-left: 50px;
+
+}
+#bottom{
+    position: absolute;
+    left: 30px;
+    
+    margin-left: 50px;
+    width: 190px;
+    margin-top: 50px;
+    height: 150px;
+
+}
+#bottom h2{
+    font-size: 1.5em;
+    color: rgb(16, 13, 13);
+    
+
+}
+#bottom p{
+    color: rgb(14, 14, 14);
+    margin-top: 10px;
+   
+
+}
+#bottom h3{
+     color: rgb(16, 15, 15);
+     margin-top: 20px;
+    
+}
+#taskbar{
+    position: absolute;
+    display: flex;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    
+    padding: 10px 20px;
+}
+#taskbar h1{
+    color: rgb(18, 16, 16);
+}
+#taskbar a{
+    text-decoration: none;
+    color: rgb(11, 10, 10);
+margin-left: 1150px;
+    font-size: 1.2em;
+    padding: 10px;
+
+
+}
